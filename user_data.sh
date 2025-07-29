@@ -70,8 +70,7 @@ echo "$MSG" >> "$LOGFILE"
 EOF
 
 sudo touch /var/log/monitoramento.log
-
-
+sudo timedatectl set-timezone America/Sao_Paulo
 chmod +x /usr/local/bin/monitor_site.sh
 
 echo "* * * * * /usr/local/bin/monitor_site.sh" | sudo crontab -
