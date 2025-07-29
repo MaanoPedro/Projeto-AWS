@@ -1,3 +1,7 @@
+# Objetivo
+
+Implantar uma infraestrutura básica e funcional na AWS, com servidor web Nginx hospedando uma página HTML simples, além de um sistema de monitoramento automatizado com alertas via Discord webhook e registro de logs no servidor.
+
 # DOCUMENTAÇÃO TÉCNICA - Infraestrutura AWS com Terraform
 
 ## 1. variables.tf
