@@ -50,6 +50,7 @@ set -x
 
 SITE="http://localhost"
 WEBHOOK_URL= "<WEBHOOK_URL>"
+LOGFILE="/var/log/monitoramento.log"
 HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" "$SITE")
 
 if [ "$HTTP_STATUS" -ne 200 ]; then
@@ -60,7 +61,7 @@ fi
 
 echo "Enviando para o Discord: $MSG" >> "$LOGFILE"
 
-curl -v -H "Content-Type: application/json" \
+curl -s -H "Content-Type: application/json" \
      -X POST \
      -d "{\"content\": \"$MSG\"}" \
      "$WEBHOOK_URL" >> "$LOGFILE" 2>&1
@@ -68,7 +69,8 @@ curl -v -H "Content-Type: application/json" \
 echo "$MSG" >> "$LOGFILE"
 EOF
 
-touch /var/log/monitoramento.log
+sudo touch /var/log/monitoramento.log
+
 
 chmod +x /usr/local/bin/monitor_site.sh
 
