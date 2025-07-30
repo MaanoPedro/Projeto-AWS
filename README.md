@@ -1,7 +1,3 @@
-# Objetivo
-
-Implantar uma infraestrutura básica e funcional na AWS, com servidor web Nginx hospedando uma página HTML simples, além de um sistema de monitoramento automatizado com alertas via Discord webhook e registro de logs no servidor.
-
 # 🌐 Infraestrutura Web na AWS com Terraform
 
 Este projeto provisiona uma infraestrutura básica na AWS com uma instância EC2 rodando Nginx pelo sistema operacional Ubuntu 22.04.4 LTS, uma página HTML personalizada e um sistema de monitoramento com alertas via webhook do Discord.
